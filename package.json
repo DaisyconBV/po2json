@@ -1,7 +1,7 @@
 {
   "name": "po2json",
   "description": "Convert PO files to JSON",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-beta-3",
   "homepage": "https://github.com/mikeedwards/po2json",
   "author": {
     "name": "Joshua I. Miller",
@@ -46,26 +46,20 @@
   "bugs": {
     "url": "https://github.com/mikeedwards/po2json/issues"
   },
-  "licenses": [
-    {
-      "type": "GNU Library General Public License",
-      "url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.0.html"
-    }
-  ],
+  "license": "LGPL-2.0-or-later",
   "bin": {
     "po2json": "bin/po2json"
   },
-  "main": "index.js",
   "engines": {
-    "node": ">=6.0"
+    "node": ">=10.0"
   },
   "scripts": {
-    "test": "nodeunit test/"
+    "test": "jest"
   },
   "devDependencies": {
     "jed": "~1.1.1",
-    "messageformat": "^2.0.4",
-    "nodeunit": "*"
+    "jest": "^26.1.0",
+    "messageformat": "^2.3.0"
   },
   "keywords": [
     "i18n",
@@ -74,7 +68,12 @@
     "po"
   ],
   "dependencies": {
-    "commander": "^2.18.0",
+    "commander": "^6.0.0",
+    "gettext-parser": "2.0.0",
+    "gettext-to-messageformat": "0.3.1"
+  },
+  "peerDependencies": {
+    "commander": "^6.0.0",
     "gettext-parser": "2.0.0",
     "gettext-to-messageformat": "https://github.com/DaisyconBV/gettext-to-messageformat.git#master"
   }
